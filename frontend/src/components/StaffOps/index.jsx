@@ -7,7 +7,6 @@ import VolunteerList from './VolunteerList.jsx'
 import SustainabilityMetrics from './SustainabilityMetrics.jsx'
 import { useSocket } from '../../hooks/useSocket.js'
 import { useAI } from '../../hooks/useAI.js'
-import { SEVERITY_COLORS } from '../../utils/constants.js'
 
 export default function StaffOps() {
   const { snapshot } = useSocket()
