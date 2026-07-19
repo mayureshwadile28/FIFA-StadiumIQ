@@ -6,7 +6,18 @@
 import { useState } from 'react'
 import axios from 'axios'
 
-const API_BASE = import.meta.env.VITE_API_BASE || `http://${window.location.hostname}:3001/api`
+const getApiBase = () => {
+  if (import.meta.env.VITE_API_BASE) {
+    return import.meta.env.VITE_API_BASE
+  }
+  const host = window.location.hostname
+  if (host === 'localhost' || host === '127.0.0.1') {
+    return 'http://localhost:3001/api'
+  }
+  return `${window.location.protocol}//${window.location.host}/api`
+}
+
+const API_BASE = getApiBase()
 
 export function useAI() {
   const [loading, setLoading] = useState(false)

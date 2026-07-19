@@ -19,9 +19,13 @@ const app = express()
 const httpServer = createServer(app)
 const io = new Server(httpServer, {
   cors: {
-    origin: process.env.NODE_ENV === 'production'
-      ? 'https://your-production-domain.com'
-      : 'http://localhost:5173',
+    origin: (origin, callback) => {
+      if (!origin || origin.indexOf('localhost') !== -1 || origin.indexOf('127.0.0.1') !== -1 || origin.indexOf('vercel.app') !== -1) {
+        callback(null, true)
+      } else {
+        callback(new Error('Not allowed by CORS'))
+      }
+    },
     methods: ['GET', 'POST'],
   },
 })
@@ -54,9 +58,13 @@ io.use((socket, next) => {
 // ── Security middleware ──────────────────────────────────────────────────────
 app.use(helmet())
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production'
-    ? 'https://your-production-domain.com'
-    : 'http://localhost:5173',
+  origin: (origin, callback) => {
+    if (!origin || origin.indexOf('localhost') !== -1 || origin.indexOf('127.0.0.1') !== -1 || origin.indexOf('vercel.app') !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
 }))
 
 // Limit request body size to prevent payload attacks
