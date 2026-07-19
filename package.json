@@ -1,0 +1,16 @@
+{
+  "name": "stadiumiq-root",
+  "version": "1.0.0",
+  "description": "StadiumIQ root workspace — FIFA World Cup 2026 AI Command Center",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "test:backend": "npm --prefix backend test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
