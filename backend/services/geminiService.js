@@ -222,7 +222,7 @@ function getAnalyzeCrowdFallback(crowdContext) {
   let contextData = {}
   try {
     contextData = JSON.parse(crowdContext)
-  } catch (e) {
+  } catch {
     contextData = {}
   }
 
@@ -297,42 +297,42 @@ function getFanChatFallback(message, stadiumContext) {
     en: {
       transport: `The next metro departs from Stadium Central in ${nextMetro} minutes. There are also frequent express buses operating directly outside the East Plaza to the City Centre and airport.`,
       gates: `The currently open safe gates are: ${openGates}. Please use the entrance closest to your sector for direct and comfortable seating access.`,
-      accessibility: `StadiumIQ is fully accessible! Please head to Gate 4 or Gate 8, which are equipped with flat, step-free access, dedicated wheelchair positions, and specialized stewards to assist you.`,
-      food: `Food Court North (near Gate 2) and Food Court South (near Gate 6) are fully open and offering local and international food, with vegetarian options clearly labeled.`,
-      greet: `Hello! Welcome to the FIFA World Cup 2026. I am StadiumIQ, your smart digital assistant. I can help you with gates, transport, accessibility, food, or general stadium questions.`,
-      generic: `Welcome to StadiumIQ! Currently we are in the stadium operations mode. Feel free to ask me about transport arrivals, open gates, food options, or accessible routes!`
+      accessibility: 'StadiumIQ is fully accessible! Please head to Gate 4 or Gate 8, which are equipped with flat, step-free access, dedicated wheelchair positions, and specialized stewards to assist you.',
+      food: 'Food Court North (near Gate 2) and Food Court South (near Gate 6) are fully open and offering local and international food, with vegetarian options clearly labeled.',
+      greet: 'Hello! Welcome to the FIFA World Cup 2026. I am StadiumIQ, your smart digital assistant. I can help you with gates, transport, accessibility, food, or general stadium questions.',
+      generic: 'Welcome to StadiumIQ! Currently we are in the stadium operations mode. Feel free to ask me about transport arrivals, open gates, food options, or accessible routes!'
     },
     es: {
       transport: `El próximo metro sale de la estación Stadium Central en ${nextMetro} minutos. También hay autobuses expresos frecuentes fuera de la Plaza Este hacia el centro de la ciudad.`,
       gates: `Las puertas de acceso seguras abiertas son: ${openGates}. Le recomendamos usar la más cercana a su sector para un acceso más rápido.`,
-      accessibility: `¡StadiumIQ es totalmente accesible! Diríjase a la Puerta 4 o la Puerta 8, que cuentan con rampas sin escalones, espacios reservados para sillas de ruedas y personal de apoyo.`,
-      food: `El Food Court Norte (Puerta 2) y el Food Court Sur (Puerta 6) están abiertos y ofrecen comida local e internacional con opciones vegetarianas.`,
-      greet: `¡Hola! Bienvenido a la Copa Mundial de la FIFA 2026. Soy StadiumIQ, su asistente digital inteligente. ¿En qué puedo ayudarle hoy?`,
-      generic: `¡Bienvenido a StadiumIQ! Puedo responder sus dudas sobre las llegadas del metro, la ubicación de las puertas abiertas o la comida disponible.`
+      accessibility: '¡StadiumIQ es totalmente accesible! Diríjase a la Puerta 4 o la Puerta 8, que cuentan con rampas sin escalones, espacios reservados para sillas de ruedas y personal de apoyo.',
+      food: 'El Food Court Norte (Puerta 2) y el Food Court Sur (Puerta 6) están abiertos y ofrecen comida local e internacional con opciones vegetarianas.',
+      greet: '¡Hola! Bienvenido a la Copa Mundial de la FIFA 2026. Soy StadiumIQ, su asistente digital inteligente. ¿En qué puedo ayudarle hoy?',
+      generic: '¡Bienvenido a StadiumIQ! Puedo responder sus dudas sobre las llegadas del metro, la ubicación de las puertas abiertas o la comida disponible.'
     },
     pt: {
       transport: `O próximo metrô sai da estação Stadium Central em ${nextMetro} minutos. Também há ônibus expressos frequentes do lado de fora da Praça Leste.`,
       gates: `Os portões de acesso seguros abertos são: ${openGates}. Por favor, use o portão mais próximo do seu setor para chegar ao seu assento.`,
-      accessibility: `O StadiumIQ é totalmente acessível! Dirija-se ao Portão 4 ou Portão 8, que possuem acessibilidade para cadeiras de rodas, rampas sem degraus e monitores treinados.`,
-      food: `As praças de alimentação Norte (Portão 2) e Sul (Portão 6) estão abertas e oferecem lanches diversos e opções vegetarianas.`,
-      greet: `Olá! Bem-vindo à Copa do Mundo da FIFA 2026. Sou o StadiumIQ, seu assistente virtual. Como posso ajudar você hoje?`,
-      generic: `Bem-vindo ao StadiumIQ! Fique à vontade para perguntar sobre transporte, portões de entrada abertos ou praças de alimentação.`
+      accessibility: 'O StadiumIQ é totalmente acessível! Dirija-se ao Portão 4 ou Portão 8, que possuem acessibilidade para cadeiras de rodas, rampas sem degraus e monitores treinados.',
+      food: 'As praças de alimentação Norte (Portão 2) e Sul (Portão 6) estão abertas e oferecem lanches diversos e opções vegetarianas.',
+      greet: 'Olá! Bem-vindo à Copa do Mundo da FIFA 2026. Sou o StadiumIQ, seu assistente virtual. Como posso ajudar você hoje?',
+      generic: 'Bem-vindo ao StadiumIQ! Fique à vontade para perguntar sobre transporte, portões de entrada abertos ou praças de alimentação.'
     },
     fr: {
       transport: `Le prochain métro part de la station Stadium Central dans ${nextMetro} minutes. Des navettes express circulent également régulièrement devant la Place Est.`,
       gates: `Les portes d'accès ouvertes et sécurisées sont: ${openGates}. Veuillez utiliser l'entrée la plus proche de votre secteur de tribune.`,
-      accessibility: `StadiumIQ est entièrement accessible! Rendez-vous à la Porte 4 ou à la Porte 8, qui disposent d'un accès de plain-pied, d'emplacements PMR et d'un personnel dédié.`,
-      food: `Les zones de restauration Nord (Porte 2) et Sud (Porte 6) sont ouvertes avec des menus internationaux et des options végétariennes.`,
-      greet: `Bonjour! Bienvenue à la Coupe du Monde de la FIFA 2026. Je suis StadiumIQ, votre assistant connecté. Comment puis-je vous aider?`,
-      generic: `Bienvenue sur StadiumIQ! Je suis à votre disposition pour vous renseigner sur le métro, l'emplacement des portes ou les points de restauration.`
+      accessibility: 'StadiumIQ est entièrement accessible! Rendez-vous à la Porte 4 ou à la Porte 8, qui disposent d\'un accès de plain-pied, d\'emplacements PMR et d\'un personnel dédié.',
+      food: 'Les zones de restauration Nord (Porte 2) et Sud (Porte 6) sont ouvertes avec des menus internationaux et des options végétariennes.',
+      greet: 'Bonjour! Bienvenue à la Coupe du Monde de la FIFA 2026. Je suis StadiumIQ, votre assistant connecté. Comment puis-je vous aider?',
+      generic: 'Bienvenue sur StadiumIQ! Je suis à votre disposition pour vous renseigner sur le métro, l\'emplacement des portes ou les points de restauration.'
     },
     de: {
       transport: `Die nächste U-Bahn fährt in ${nextMetro} Minuten von Stadium Central ab. Zudem gibt es regelmäßige Expressbusse direkt vor dem Ostplatz.`,
       gates: `Die geöffneten Tore sind: ${openGates}. Bitte nutzen Sie den Eingang, der Ihrem Sitzplatzbereich am nächsten liegt.`,
-      accessibility: `StadiumIQ is barrierefrei! Bitte nutzen Sie Tor 4 oder Tor 8. Diese bieten stufenlosen Zugang, Rollstuhlplätze und Servicepersonal vor Ort.`,
-      food: `Die Food Courts Nord (Tor 2) und Süd (Tor 6) sind geöffnet und bieten eine große Auswahl an Speisen sowie vegetarische Gerichte an.`,
-      greet: `Hallo! Willkommen zur FIFA Fussball-Weltmeisterschaft 2026. Ich bin StadiumIQ, Ihr digitaler Assistent. Wie kann ich Ihnen heute helfen?`,
-      generic: `Willkommen bei StadiumIQ! Fragen Sie mich gerne nach Abfahrtszeiten, geöffneten Toren oder barrierefreien Wegen im Stadion.`
+      accessibility: 'StadiumIQ is barrierefrei! Bitte nutzen Sie Tor 4 oder Tor 8. Diese bieten stufenlosen Zugang, Rollstuhlplätze und Servicepersonal vor Ort.',
+      food: 'Die Food Courts Nord (Tor 2) und Süd (Tor 6) sind geöffnet und bieten eine große Auswahl an Speisen sowie vegetarische Gerichte an.',
+      greet: 'Hallo! Willkommen zur FIFA Fussball-Weltmeisterschaft 2026. Ich bin StadiumIQ, Ihr digitaler Assistent. Wie kann ich Ihnen heute helfen?',
+      generic: 'Willkommen bei StadiumIQ! Fragen Sie mich gerne nach Abfahrtszeiten, geöffneten Toren oder barrierefreien Wegen im Stadion.'
     }
   }
 
@@ -362,7 +362,7 @@ function getOptimizeStaffFallback(staffContext) {
   let contextData = {}
   try {
     contextData = JSON.parse(staffContext)
-  } catch (e) {
+  } catch {
     contextData = {}
   }
 

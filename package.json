@@ -11,6 +11,7 @@
     "test:backend": "npm --prefix backend test"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "eslint": "^10.7.0"
   }
 }
