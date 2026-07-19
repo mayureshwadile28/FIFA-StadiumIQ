@@ -108,10 +108,13 @@ io.on('connection', (socket) => {
 startSimulation(io, { tickInterval: 8000, startMinute: -90 })
 
 // ── Start server ─────────────────────────────────────────────────────────────
-const PORT = process.env.PORT || 3001
-httpServer.listen(PORT, () => {
-  console.log(`[StadiumIQ] Backend running on http://localhost:${PORT}`)
-  console.log(`[StadiumIQ] Gemini API key: ${process.env.GEMINI_API_KEY ? 'LOADED' : 'MISSING!'}`)
-})
+if (!process.env.VERCEL) {
+  const PORT = process.env.PORT || 3001
+  httpServer.listen(PORT, () => {
+    console.log(`[StadiumIQ] Backend running on http://localhost:${PORT}`)
+    console.log(`[StadiumIQ] Gemini API key: ${process.env.GEMINI_API_KEY ? 'LOADED' : 'MISSING!'}`)
+  })
+}
 
+export default app
 export { app, httpServer }
